@@ -20,13 +20,15 @@ namespace StaticType
 
             Console.WriteLine($"Counter current value: Counter = {Point.Counter}");
             Console.WriteLine($"Distance between point 3 and point 4 is" +
-                    $" {Calculation.GetDestancebetweenPoints(point3, point4)}");
+                    $" {Point.GetDestancebetweenPoints(point3, point4)}");
 
-            Calculation calculation = new(); 
+            
             Console.WriteLine($"Distance between internal point and point 3 is" +
-                    $" {calculation.GetDistanceToPoint(point3)}");
-            Console.WriteLine($"Distance between internal point and point 4 is" +
-                    $" {calculation.GetDistanceToPoint(point4)}");
+                    $" {point3.GetDistanceToPoint(point4)}");
+            Console.WriteLine($"Distance between internal point and point 3 is" +
+                    $" {point2.GetDistanceToPoint(point3)}");
+            Console.WriteLine($"Distance between internal point and point 1 is" +
+                    $" {point4.GetDistanceToPoint(point1)}");
 
 
 
